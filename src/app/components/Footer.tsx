@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Crown, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Sparkles, MapPin, Phone, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,15 +10,15 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-yellow-500 flex items-center justify-center">
-                <Crown className="w-6 h-6 text-primary-foreground" />
+                <Sparkles className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-lg text-foreground">King Barber</div>
-                <div className="text-xs text-primary -mt-1">LOUNGE</div>
+                <div className="text-lg text-foreground">Image</div>
+                <div className="text-xs text-primary -mt-1">SALON</div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Where royalty meets grooming excellence. Premium barber services in the heart of Sarajevo.
+              Frizersko - kozmeticki salon u Sarajevu sa fokusom na kosu, boju, njegu i uredan, moderan ambijent.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/barbers" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Our Barbers
+                  Our Team
                 </Link>
               </li>
               <li>
@@ -55,15 +55,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Džemala Bijedića 166, Sarajevo</span>
+                <span className="text-sm text-muted-foreground">Zelenih beretki 16, 71000 Sarajevo</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+387 61 234 567</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">info@kingbarber.ba</span>
+                <span className="text-sm text-muted-foreground">033 440 900</span>
               </li>
             </ul>
           </div>
@@ -72,19 +68,22 @@ export function Footer() {
           <div>
             <h4 className="text-foreground mb-4">Working Hours</h4>
             <div className="text-sm text-muted-foreground mb-4 space-y-1">
-              <p>Mon - Fri: 08:00 - 21:00</p>
-              <p>Saturday: 08:00 - 20:00</p>
-              <p>Sunday: 10:00 - 18:00</p>
+              <p>Mon - Sat: 08:00 - 20:00</p>
+              <p>Sunday: Closed</p>
             </div>
             <div className="flex gap-3 mt-4">
               <a
-                href="#"
+                href="https://www.facebook.com/frizerskokozmetickisaloniIMAGE/?locale=hr_HR"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 bg-muted hover:bg-gradient-to-br hover:from-primary hover:to-yellow-500 transition-all flex items-center justify-center group"
               >
                 <Instagram className="w-5 h-5 group-hover:text-primary-foreground" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/frizerskokozmetickisaloniIMAGE/?locale=hr_HR"
+                target="_blank"
+                rel="noreferrer"
                 className="w-10 h-10 bg-muted hover:bg-gradient-to-br hover:from-primary hover:to-yellow-500 transition-all flex items-center justify-center group"
               >
                 <Facebook className="w-5 h-5 group-hover:text-primary-foreground" />
@@ -95,7 +94,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2026 King Barber Lounge. All rights reserved.
+            © 2026 Image Frizersko - Kozmeticki salon. All rights reserved.
           </p>
         </div>
       </div>

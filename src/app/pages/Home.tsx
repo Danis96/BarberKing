@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Crown, Sparkles, Clock, Trophy, ArrowRight, Star, Zap, Shield } from "lucide-react";
+import { Sparkles, Clock, Trophy, ArrowRight, Star, Zap, Shield, Scissors } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -9,9 +9,9 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 export function Home() {
   const features = [
     {
-      icon: Crown,
-      title: "Royal Treatment",
-      description: "Experience grooming fit for royalty with our premium services",
+      icon: Scissors,
+      title: "Salon Expertise",
+      description: "Hair, color, and beauty services shaped around your style goals",
     },
     {
       icon: Zap,
@@ -20,21 +20,21 @@ export function Home() {
     },
     {
       icon: Trophy,
-      title: "Award-Winning",
-      description: "Recognized excellence in men's grooming and style",
+      title: "Trusted Team",
+      description: "A salon clients return to for consistent results and personal care",
     },
     {
       icon: Shield,
-      title: "VIP Program",
-      description: "Join our loyalty program and unlock exclusive member benefits",
+      title: "All-in-One Visit",
+      description: "Cut, color, styling, and beauty treatments in one place",
     },
   ];
 
   const services = [
-    { name: "Signature Cut", price: "30 KM", duration: "40 min", popular: true },
-    { name: "Royal Fade", price: "40 KM", duration: "50 min", popular: true },
-    { name: "Beard Styling", price: "20 KM", duration: "25 min", popular: false },
-    { name: "King's Package", price: "55 KM", duration: "75 min", popular: true },
+    { name: "Women's Haircut", price: "35 KM", duration: "45 min", popular: true },
+    { name: "Men's Haircut", price: "25 KM", duration: "30 min", popular: true },
+    { name: "Hair Coloring", price: "60 KM", duration: "120 min", popular: false },
+    { name: "Beauty Package", price: "75 KM", duration: "100 min", popular: true },
   ];
 
   return (
@@ -80,8 +80,8 @@ export function Home() {
                 className="inline-block mb-6"
               >
                 <Badge className="bg-primary text-primary-foreground border-0 px-6 py-2 text-sm">
-                  <Crown className="w-4 h-4 mr-2 inline" />
-                  VIP Members Get 15% Off
+                  <Sparkles className="w-4 h-4 mr-2 inline" />
+                  Image Salon Sarajevo
                 </Badge>
               </motion.div>
 
@@ -91,9 +91,9 @@ export function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
                 <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-                  <span className="block text-foreground">Where Kings</span>
+                  <span className="block text-foreground">Hair, Beauty</span>
                   <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
-                    Get Crowned
+                    And Care
                   </span>
                 </h1>
               </motion.div>
@@ -104,7 +104,7 @@ export function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl"
               >
-                Step into King Barber Lounge and experience premium grooming that redefines luxury in Sarajevo.
+                Welcome to Image, a Sarajevo salon for haircuts, color, styling, and beauty appointments in the city center.
               </motion.p>
 
               <motion.div
@@ -141,12 +141,12 @@ export function Home() {
                 className="mt-12 flex gap-8"
               >
                 <div>
-                  <div className="text-3xl text-primary mb-1">500+</div>
+                  <div className="text-3xl text-primary mb-1">87+</div>
                   <div className="text-sm text-muted-foreground">Happy Clients</div>
                 </div>
                 <div className="border-l border-border pl-8">
-                  <div className="text-3xl text-primary mb-1">10+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl text-primary mb-1">15+</div>
+                  <div className="text-sm text-muted-foreground">Years of Loyalty</div>
                 </div>
                 <div className="border-l border-border pl-8">
                   <div className="text-3xl text-primary mb-1">5.0</div>
@@ -173,7 +173,7 @@ export function Home() {
                 <div className="relative overflow-hidden border-2 border-primary/20 shadow-2xl">
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBiYXJiZXIlMjBzaG9wJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzczNjI1NDI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="King Barber Lounge Interior"
+                    alt="Image salon interior"
                     className="w-full h-[600px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
@@ -209,11 +209,11 @@ export function Home() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-2 mb-4">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary">Why Choose King</span>
+              <span className="text-sm text-primary">Why Choose Image</span>
             </div>
-            <h2 className="text-4xl md:text-5xl mb-4">The Royal Experience</h2>
+            <h2 className="text-4xl md:text-5xl mb-4">Modern Salon Experience</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Premium grooming services designed for the modern gentleman
+              Professional services for everyday maintenance, transformations, and event-ready styling
             </p>
           </motion.div>
 
@@ -255,8 +255,8 @@ export function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-4">
             <div>
-              <h2 className="text-4xl md:text-5xl mb-3">Signature Services</h2>
-              <p className="text-muted-foreground text-lg">Curated treatments for the modern king</p>
+              <h2 className="text-4xl md:text-5xl mb-3">Popular Services</h2>
+              <p className="text-muted-foreground text-lg">Core appointments clients book most often at Image</p>
             </div>
             <Button 
               asChild 
@@ -334,12 +334,12 @@ export function Home() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <Crown className="w-16 h-16 text-primary mx-auto mb-6" />
+            <Sparkles className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
-              Ready to Look Like Royalty?
+              Ready for Your Next Appointment?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients and experience the King Barber Lounge difference
+              Book your visit at Image and let the team shape the right cut, color, or finishing service for you
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -348,8 +348,7 @@ export function Home() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/30 text-lg px-8"
               >
                 <Link to="/booking">
-                  <Crown className="mr-2 w-5 h-5" />
-                  Book Your Throne
+                  Book With Image
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>

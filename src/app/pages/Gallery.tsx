@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, Crown, Sparkles } from "lucide-react";
+import { X, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
 
@@ -9,9 +9,9 @@ export function Gallery() {
 
   const categories = [
     { id: "all", label: "All" },
-    { id: "cuts", label: "Royal Cuts" },
-    { id: "beards", label: "Beards" },
-    { id: "shop", label: "The Lounge" },
+    { id: "cuts", label: "Hair" },
+    { id: "beards", label: "Beauty" },
+    { id: "shop", label: "Salon" },
   ];
 
   const [activeCategory, setActiveCategory] = useState("all");
@@ -20,37 +20,37 @@ export function Gallery() {
     {
       src: "https://images.unsplash.com/photo-1622629217819-892db897f01a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzaG9wJTIwaGFpcmN1dCUyMHJlc3VsdHxlbnwxfHx8fDE3NzM3MzgwMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "cuts",
-      title: "Signature Fade",
+      title: "Fresh Cut",
     },
     {
       src: "https://images.unsplash.com/photo-1693591936914-14645081663a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW5zJTIwZmFkZSUyMGhhaXJjdXQlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzczNzM4MDA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "cuts",
-      title: "Precision Style",
+      title: "Styled Finish",
     },
     {
       src: "https://images.unsplash.com/photo-1704124205210-34fd56da2707?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFyZCUyMGdyb29taW5nJTIwc3R5bGV8ZW58MXx8fHwxNzczNzM4MDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "beards",
-      title: "Beard Mastery",
+      title: "Beauty Detail",
     },
     {
       src: "https://images.unsplash.com/photo-1654097801176-cb1795fd0c5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzdHlsaW5nJTIwbWVucyUyMGhhaXJ8ZW58MXx8fHwxNzczNzIyMjA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "cuts",
-      title: "Royal Transform",
+      title: "Hair Transformation",
     },
     {
       src: "https://images.unsplash.com/photo-1759675905700-a1b5efedc05c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtZW5zJTIwaGFpcmN1dCUyMHN0eWxlfGVufDF8fHx8MTc3MzcwNTA3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       category: "cuts",
-      title: "Executive Cut",
+      title: "Modern Styling",
     },
     {
       src: "https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzaG9wJTIwaW50ZXJpb3IlMjBsdXh1cnl8ZW58MXx8fHwxNzczNjgyNzQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "shop",
-      title: "King's Lounge",
+      title: "Image Interior",
     },
     {
       src: "https://images.unsplash.com/photo-1747830280502-f33d7305a714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBiYXJiZXIlMjBwb3J0cmFpdCUyMG1hbGV8ZW58MXx8fHwxNzczNzM2MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "shop",
-      title: "Master at Work",
+      title: "Team at Work",
     },
     {
       src: "https://images.unsplash.com/photo-1647616944664-3d301c2b4638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBiYXJiZXIlMjBzY2lzc29ycyUyMHRvb2xzfGVufDF8fHx8MTc3MzczNzc2MHww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -60,7 +60,7 @@ export function Gallery() {
     {
       src: "https://images.unsplash.com/photo-1603899968034-1a56ca48d172?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFyZCUyMHRyaW0lMjBncm9vbWluZ3xlbnwxfHx8fDE3NzM3MDY5OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       category: "beards",
-      title: "Beard Artistry",
+      title: "Care Session",
     },
   ];
 
@@ -99,7 +99,7 @@ export function Gallery() {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore our portfolio of precision cuts, royal fades, and masterful grooming.
+              Explore the visual style of Image through hair, beauty, and salon atmosphere.
             </p>
           </motion.div>
         </div>
@@ -121,7 +121,7 @@ export function Gallery() {
                     : "border-primary/30 hover:bg-primary/10 hover:border-primary"
                 }
               >
-                {activeCategory === category.id && <Crown className="w-4 h-4 mr-2" />}
+                {activeCategory === category.id && <Sparkles className="w-4 h-4 mr-2" />}
                 {category.label}
               </Button>
             ))}
@@ -162,7 +162,7 @@ export function Gallery() {
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-8 h-8 bg-gradient-to-br from-primary to-yellow-500 flex items-center justify-center">
-                          <Crown className="w-4 h-4 text-primary-foreground" />
+                          <Sparkles className="w-4 h-4 text-primary-foreground" />
                         </div>
                         <h3 className="text-xl text-foreground">{image.title}</h3>
                       </div>
@@ -215,7 +215,7 @@ export function Gallery() {
               </div>
               <div className="mt-6 text-center">
                 <h3 className="text-3xl mb-2">{filteredImages[selectedImage].title}</h3>
-                <p className="text-muted-foreground">King Barber Lounge Excellence</p>
+                <p className="text-muted-foreground">Image salon atmosphere</p>
               </div>
             </motion.div>
           </motion.div>

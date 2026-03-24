@@ -8,7 +8,7 @@ export function MobileNav() {
   const navItems = [
     { to: "/", icon: Home, label: "Home" },
     { to: "/services", icon: Crown, label: "Services" },
-    { to: "/barbers", icon: Users, label: "Barbers" },
+    { to: "/barbers", icon: Users, label: "Team" },
     { to: "/gallery", icon: Image, label: "Gallery" },
     { to: "/booking", icon: Calendar, label: "Book" },
   ];
