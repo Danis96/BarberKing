@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { ArrowUpRight, Menu, Scissors, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, Menu, Scissors, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
@@ -52,11 +52,10 @@ export function Header() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-lg tracking-[0.08em] text-foreground">Image</span>
-                    <Sparkles className="h-4 w-4 text-primary" />
+                    <span className="display-font text-2xl leading-none text-foreground">The Men's Room</span>
                   </div>
                   <div className="text-xs uppercase tracking-[0.34em] text-muted-foreground">
-                    Frizersko - Kozmeticki salon
+                    Barbershop Sarajevo
                   </div>
                 </div>
               </Link>
@@ -133,10 +132,10 @@ export function Header() {
               <div className="mt-3 overflow-hidden rounded-[28px] border border-black/6 bg-card/96 p-4 shadow-[0_18px_44px_rgba(78,62,44,0.14)] backdrop-blur-xl dark:border-primary/15 dark:bg-background/94 dark:shadow-[0_22px_70px_rgba(0,0,0,0.32)]">
                 <div className="mb-4 rounded-2xl border border-border/70 bg-background/65 p-4 dark:bg-card/70">
                   <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                    Image Salon
+                    Barbershop The Men's Room
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Hair, color, beauty, and booking in one place.
+                    Sharp cuts, beard care, and a proper men's grooming room.
                   </p>
                 </div>
 
@@ -171,7 +170,7 @@ export function Header() {
                   asChild
                   className="mt-4 h-12 w-full rounded-2xl bg-primary text-primary-foreground hover:bg-primary/90"
                 >
-                  <Link to="/booking">Book Appointment</Link>
+                  <Link to="/booking">Book a Chair</Link>
                 </Button>
               </div>
             </div>

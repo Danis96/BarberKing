@@ -38,24 +38,24 @@ type BookingData = {
 const totalSteps = 4;
 
 const bookingSteps = [
-  { id: 1, label: "Service", description: "Choose treatment", icon: Scissors },
-  { id: 2, label: "Team", description: "Pick your specialist", icon: User },
+  { id: 1, label: "Service", description: "Choose your cut", icon: Scissors },
+  { id: 2, label: "Barber", description: "Pick your chair", icon: User },
   { id: 3, label: "Schedule", description: "Select date and time", icon: CalendarDays },
-  { id: 4, label: "Details", description: "Confirm your booking", icon: Check },
+  { id: 4, label: "Details", description: "Confirm the visit", icon: Check },
 ] as const;
 
 const barberNotes: Record<string, { specialty: string; accent: string }> = {
-  aldijana: { specialty: "Color correction, balayage, and glossy finishes", accent: "Color expert" },
-  azem: { specialty: "Precise men's cuts with long-term client loyalty", accent: "Most requested" },
-  sarah: { specialty: "Beauty care and clean finishing details", accent: "Beauty focused" },
-  berina: { specialty: "Hair styling and lashes for polished results", accent: "Finishing specialist" },
-  any: { specialty: "Fastest route to the next open appointment", accent: "Best availability" },
+  amin: { specialty: "Low fades, crops, and strong texture control", accent: "Most requested" },
+  harun: { specialty: "Classic men's cuts and beard maintenance", accent: "Regulars' pick" },
+  kerim: { specialty: "Lineups, razor detailing, and sharp finishing", accent: "Precision focused" },
+  adel: { specialty: "Modern styling built for everyday wear", accent: "Trend aware" },
+  any: { specialty: "Fastest route to the next open chair", accent: "Best availability" },
 };
 
 const slotPeriods = [
-  { label: "Morning", start: 8, end: 12 },
+  { label: "Morning", start: 9, end: 12 },
   { label: "Afternoon", start: 12, end: 17 },
-  { label: "Evening", start: 17, end: 21 },
+  { label: "Evening", start: 17, end: 20 },
 ];
 
 function getDateOptions() {
@@ -102,12 +102,12 @@ function getStepCopy(step: number) {
     case 1:
       return {
         title: "Choose your service",
-        description: "Start with the treatment that best matches the visit you want.",
+        description: "Start with the cut, beard service, or package that fits your visit.",
       };
     case 2:
       return {
-        title: "Select your specialist",
-        description: "Choose a preferred team member or pick the fastest available appointment.",
+        title: "Select your barber",
+        description: "Choose a preferred barber or pick the fastest available chair.",
       };
     case 3:
       return {
@@ -117,12 +117,12 @@ function getStepCopy(step: number) {
     case 4:
       return {
         title: "Add your details",
-        description: "Review the appointment and leave the contact details the salon should use.",
+        description: "Review the appointment and leave the contact details the shop should use.",
       };
     default:
       return {
-        title: "Book appointment",
-        description: "Complete the steps below to confirm your appointment.",
+        title: "Book your visit",
+        description: "Complete the steps below to confirm your visit.",
       };
   }
 }
@@ -235,14 +235,14 @@ export function Booking() {
                   >
                     <Badge className="border border-primary/20 bg-primary/10 px-4 py-2 text-primary">
                       <Star className="mr-2 h-4 w-4" />
-                      Returning guest pricing unlocked: 10% off this booking
+                      Returning guest pricing unlocked: 10% off this visit
                     </Badge>
                   </motion.div>
                 )}
 
                 <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                   <div>
-                    <h1 className="text-4xl md:text-5xl">Book Appointment</h1>
+                    <h1 className="display-font text-5xl md:text-6xl">Book a Chair</h1>
                     <p className="mt-2 max-w-2xl text-base text-muted-foreground md:text-lg">
                       {stepCopy.description}
                     </p>
@@ -305,7 +305,7 @@ export function Booking() {
                     <div className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Quick book</div>
                     <h2 className="mt-2 text-2xl">Need the fastest route?</h2>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      We’ll preselect a popular service, the earliest available specialist, and the next bookable slot.
+                      We’ll preselect a popular service, the earliest available barber, and the next bookable slot.
                     </p>
                   </div>
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -320,7 +320,7 @@ export function Booking() {
                   </div>
                   <div className="flex items-center justify-between rounded-xl border border-border/70 bg-background/50 px-4 py-3">
                     <span>Specialist</span>
-                    <span className="text-foreground">Any available</span>
+                    <span className="text-foreground">Any available barber</span>
                   </div>
                   <div className="flex items-center justify-between rounded-xl border border-border/70 bg-background/50 px-4 py-3">
                     <span>Start time</span>
@@ -480,7 +480,7 @@ export function Booking() {
 
                                   <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto] md:items-center">
                                     <p className="text-sm leading-6 text-muted-foreground">
-                                      {barberMeta?.specialty ?? "Professional salon care tailored to your visit."}
+                                      {barberMeta?.specialty ?? "Professional barbering tailored to your visit."}
                                     </p>
                                     <div className="flex items-center gap-2 self-start md:self-auto">
                                       <div className="rounded-full border border-border/70 bg-background/60 px-3 py-1 text-sm">
@@ -569,9 +569,9 @@ export function Booking() {
                               <div>
                                 <div className="text-lg">{period.label}</div>
                                 <p className="text-sm text-muted-foreground">
-                                  {period.label === "Morning" && "Best for a fresh start before work."}
+                                  {period.label === "Morning" && "Ideal before work or morning errands."}
                                   {period.label === "Afternoon" && "Balanced demand with solid availability."}
-                                  {period.label === "Evening" && "Popular after-work appointments."}
+                                  {period.label === "Evening" && "Most popular after-work chairs."}
                                 </p>
                               </div>
                               <div className="rounded-full border border-border/70 bg-background/60 px-3 py-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -697,7 +697,7 @@ export function Booking() {
                               <MessageSquare className="pointer-events-none absolute left-4 top-4 h-4 w-4 text-muted-foreground" />
                               <Textarea
                                 id="notes"
-                                placeholder="Any special requests, style preferences, or scheduling notes..."
+                                placeholder="Any fade preference, beard notes, or scheduling details..."
                                 value={bookingData.notes}
                                 onChange={(e) => setBookingField("notes", e.target.value)}
                                 className="min-h-32 border-border/70 bg-background/60 pl-11"
@@ -770,8 +770,8 @@ export function Booking() {
                     </div>
 
                     <div className="rounded-2xl border border-border/70 bg-background/45 p-4">
-                      <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Specialist</div>
-                      <div className="mt-2 text-lg">{selectedBarber?.name ?? "Choose a specialist"}</div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Barber</div>
+                      <div className="mt-2 text-lg">{selectedBarber?.name ?? "Choose a barber"}</div>
                       <div className="mt-2 text-sm text-muted-foreground">
                         {selectedBarber?.role ?? "Selection appears here"}
                       </div>
@@ -783,7 +783,7 @@ export function Booking() {
                         {bookingData.date ? formatLongDate(bookingData.date) : "Pick a date"}
                       </div>
                       <div className="mt-2 text-sm text-muted-foreground">
-                        {bookingData.time ? `${bookingData.time} appointment` : "Time slot appears here"}
+                        {bookingData.time ? `${bookingData.time} chair time` : "Time slot appears here"}
                       </div>
                     </div>
                   </div>
