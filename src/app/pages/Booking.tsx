@@ -22,6 +22,7 @@ import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { services, barbers, timeSlots, getNextAvailableSlot } from "../data/booking-data";
+import { shopInfo } from "../data/shop-info";
 import { toast } from "sonner";
 
 type BookingData = {
@@ -45,10 +46,12 @@ const bookingSteps = [
 ] as const;
 
 const barberNotes: Record<string, { specialty: string; accent: string }> = {
-  amin: { specialty: "Low fades, crops, and strong texture control", accent: "Most requested" },
-  harun: { specialty: "Classic men's cuts and beard maintenance", accent: "Regulars' pick" },
-  kerim: { specialty: "Lineups, razor detailing, and sharp finishing", accent: "Precision focused" },
-  adel: { specialty: "Modern styling built for everyday wear", accent: "Trend aware" },
+  aldin: { specialty: "Modern cuts, precision fades, and polished finishing", accent: "Most requested" },
+  kenan: { specialty: "Balanced beard shaping and clean everyday trims", accent: "Regulars' pick" },
+  "team-availability": {
+    specialty: "Fast turnaround for trims, lineups, and flexible bookings",
+    accent: "Best availability",
+  },
   any: { specialty: "Fastest route to the next open chair", accent: "Best availability" },
 };
 
@@ -213,7 +216,7 @@ export function Booking() {
   };
 
   const handleSubmit = () => {
-    toast.success("Booking confirmed! Check your email for details.");
+    toast.success(`Booking request sent to ${shopInfo.name}. Check your email for details.`);
     console.log("Booking submitted:", bookingData);
   };
 

@@ -1,7 +1,7 @@
 
-# Image Frizersko - Kozmeticki salon
+# Mehmet Goksen barber shop
 
-Image Frizersko - Kozmeticki salon is a single-page React/Vite marketing and booking experience for a Sarajevo hair and beauty salon. The app includes a branded landing page, service and team showcases, a gallery, and a multi-step appointment booking flow.
+Mehmet Goksen barber shop is a single-page React/Vite marketing and booking experience for a Sarajevo barbershop. The app includes a branded landing page, service and team showcases, a gallery, and a multi-step appointment booking flow.
 
 ## Overview
 
@@ -82,7 +82,7 @@ Important directories:
 
 - `src/app/pages` contains route-level page components
 - `src/app/components` contains shared layout and UI building blocks
-- `src/app/data` contains mock booking services, specialist profiles, and timeslot data
+- `src/app/data` contains mock booking services, business metadata, specialist profiles, and timeslot data
 - `src/styles` contains global styling, theme tokens, fonts, and Tailwind imports
 
 ## Application Notes
@@ -128,7 +128,7 @@ Common places to update branding and content:
 - no automated tests are configured in `package.json`
 - no lint script is currently defined
 - booking is frontend-only and does not submit to a server
-- some content and imagery are still based on demo/mock data
+- some imagery is still based on demo/mock photos rather than location-owned assets
 
 ## Design Source
 
