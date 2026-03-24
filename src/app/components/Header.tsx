@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { shopInfo } from "../data/shop-info";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,10 +53,10 @@ export function Header() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="display-font text-2xl leading-none text-foreground">The Men's Room</span>
+                    <span className="display-font text-2xl leading-none text-foreground">{shopInfo.shortName}</span>
                   </div>
                   <div className="text-xs uppercase tracking-[0.34em] text-muted-foreground">
-                    Barbershop Sarajevo
+                    {shopInfo.city} Barbershop
                   </div>
                 </div>
               </Link>
@@ -132,10 +133,10 @@ export function Header() {
               <div className="mt-3 overflow-hidden rounded-[28px] border border-black/6 bg-card/96 p-4 shadow-[0_18px_44px_rgba(78,62,44,0.14)] backdrop-blur-xl dark:border-primary/15 dark:bg-background/94 dark:shadow-[0_22px_70px_rgba(0,0,0,0.32)]">
                 <div className="mb-4 rounded-2xl border border-border/70 bg-background/65 p-4 dark:bg-card/70">
                   <div className="text-xs uppercase tracking-[0.28em] text-muted-foreground">
-                    Barbershop The Men's Room
+                    {shopInfo.name}
                   </div>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    Sharp cuts, beard care, and a proper men's grooming room.
+                    {shopInfo.tagline}
                   </p>
                 </div>
 

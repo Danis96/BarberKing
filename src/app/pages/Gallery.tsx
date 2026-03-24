@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
+import { shopInfo } from "../data/shop-info";
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -39,7 +40,7 @@ export function Gallery() {
     {
       src: "https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
       category: "shop",
-      title: "The Room",
+      title: "Shop Interior",
     },
     {
       src: "https://images.unsplash.com/photo-1747830280502-f33d7305a714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080",
@@ -77,7 +78,7 @@ export function Gallery() {
             </div>
             <h1 className="display-font mt-6 text-6xl text-white md:text-7xl">Style Gallery</h1>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-white/70">
-              The imagery now supports the same identity as the copy: masculine, precise, and grounded in barbershop culture.
+              A visual direction aligned with {shopInfo.name}: clean work, sharp finishing, and a grounded neighborhood barbershop feel.
             </p>
           </motion.div>
         </div>
@@ -118,7 +119,7 @@ export function Gallery() {
                   <ImageWithFallback src={image.src} alt={image.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/20 to-transparent opacity-80" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-sm uppercase tracking-[0.2em] text-primary">The Men's Room</div>
+                    <div className="text-sm uppercase tracking-[0.2em] text-primary">{shopInfo.shortName}</div>
                     <h3 className="mt-2 text-3xl text-white">{image.title}</h3>
                   </div>
                 </motion.div>
@@ -161,7 +162,7 @@ export function Gallery() {
               </div>
               <div className="mt-5 text-center">
                 <h3 className="text-3xl text-white">{filteredImages[selectedImage].title}</h3>
-                <p className="mt-2 text-white/60">Barbershop The Men's Room visual direction</p>
+                <p className="mt-2 text-white/60">{shopInfo.name} visual direction</p>
               </div>
             </motion.div>
           </motion.div>

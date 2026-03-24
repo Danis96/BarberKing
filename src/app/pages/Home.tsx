@@ -5,6 +5,7 @@ import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { shopInfo } from "../data/shop-info";
 
 export function Home() {
   const features = [
@@ -21,12 +22,12 @@ export function Home() {
     {
       icon: Sparkles,
       title: "Room Ritual",
-      description: "A warm, masculine interior designed to feel more club room than waiting room.",
+      description: "A relaxed neighborhood room that feels polished without turning formal.",
     },
     {
       icon: Star,
       title: "Consistent Results",
-      description: "Built for regulars who want their barber to know exactly how they wear it.",
+      description: "Built for regulars who want reliable cuts and a barber who remembers the details.",
     },
   ];
 
@@ -55,7 +56,7 @@ export function Home() {
                 className="mb-6"
               >
                 <Badge className="border-0 bg-primary px-5 py-2 text-primary-foreground">
-                  Sarajevo Barbershop
+                  {shopInfo.city} Barbershop
                 </Badge>
               </motion.div>
 
@@ -66,7 +67,7 @@ export function Home() {
                 className="display-font text-6xl leading-[0.92] text-white md:text-7xl lg:text-8xl"
               >
                 Barbershop
-                <span className="block text-primary">The Men's Room</span>
+                <span className="block text-primary">{shopInfo.name}</span>
               </motion.h1>
 
               <motion.p
@@ -75,7 +76,7 @@ export function Home() {
                 transition={{ duration: 0.6, delay: 0.16 }}
                 className="mt-6 max-w-xl text-lg text-white/72 md:text-xl"
               >
-                Sharp haircuts, disciplined beard work, and a room built for men who want a clean finish without the fuss.
+                {shopInfo.tagline}
               </motion.p>
 
               <motion.div
@@ -109,17 +110,17 @@ export function Home() {
                 <div className="rounded-3xl border border-white/10 bg-white/6 p-4 backdrop-blur-sm">
                   <Clock className="mb-3 h-5 w-5 text-primary" />
                   <div className="text-sm uppercase tracking-[0.2em] text-white/50">Hours</div>
-                  <div className="mt-2 text-lg text-white">09:00-20:00</div>
+                  <div className="mt-2 text-lg text-white">Check today's hours</div>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/6 p-4 backdrop-blur-sm">
                   <MapPin className="mb-3 h-5 w-5 text-primary" />
                   <div className="text-sm uppercase tracking-[0.2em] text-white/50">Location</div>
-                  <div className="mt-2 text-lg text-white">Sarajevo</div>
+                  <div className="mt-2 text-lg text-white">{shopInfo.addressLine1}</div>
                 </div>
                 <div className="rounded-3xl border border-white/10 bg-white/6 p-4 backdrop-blur-sm">
                   <Phone className="mb-3 h-5 w-5 text-primary" />
                   <div className="text-sm uppercase tracking-[0.2em] text-white/50">Call</div>
-                  <div className="mt-2 text-lg text-white">+387 62 253 084</div>
+                  <div className="mt-2 text-lg text-white">{shopInfo.phone}</div>
                 </div>
               </motion.div>
             </div>
@@ -135,14 +136,14 @@ export function Home() {
               <div className="overflow-hidden rounded-[2rem] border border-primary/25 bg-black/20 shadow-[0_30px_80px_rgba(0,0,0,0.4)]">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Barbershop interior"
+                  alt={`${shopInfo.name} interior inspiration`}
                   className="h-[620px] w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 rounded-3xl border border-white/10 bg-black/45 p-5 backdrop-blur-md">
                   <div className="text-sm uppercase tracking-[0.24em] text-white/55">Address</div>
-                  <div className="mt-2 text-2xl text-white">Hamdije Čemerlića 5 / Fojnička 1</div>
-                  <div className="mt-2 text-white/68">Easy stop for a sharp trim in Sarajevo.</div>
+                  <div className="mt-2 text-2xl text-white">{shopInfo.addressLine1}</div>
+                  <div className="mt-2 text-white/68">{shopInfo.neighborhood}, {shopInfo.city}</div>
                 </div>
               </div>
             </motion.div>
@@ -153,10 +154,10 @@ export function Home() {
       <section className="bg-[linear-gradient(180deg,rgba(253,249,243,1),rgba(243,237,228,1))] py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mb-14 max-w-2xl">
-            <div className="text-sm uppercase tracking-[0.28em] text-primary">Why The Men's Room</div>
-            <h2 className="display-font mt-4 text-5xl">A Stronger Kind of Grooming Space</h2>
+            <div className="text-sm uppercase tracking-[0.28em] text-primary">Why {shopInfo.shortName}</div>
+            <h2 className="display-font mt-4 text-5xl">Neighborhood Cuts With Strong Standards</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The brand now leans into a barbershop identity: richer tones, stronger language, and services built for men's upkeep.
+              Mehmet Goksen barber shop stands out for dependable barbering, friendly service, and a central location that keeps regulars coming back.
             </p>
           </div>
 

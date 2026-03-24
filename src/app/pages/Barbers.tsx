@@ -5,50 +5,15 @@ import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { goodLookBarbers, shopInfo } from "../data/shop-info";
 
 export function Barbers() {
-  const barbers = [
-    {
-      name: "Amin",
-      role: "Fade & Texture Specialist",
-      experience: "8+ years",
-      specialty: "Low fades, crops, and sharp texture control",
-      rating: 5.0,
-      reviews: 90,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      featured: true,
-      award: "Most Requested",
-    },
-    {
-      name: "Harun",
-      role: "Classic Cuts & Beard Care",
-      experience: "10+ years",
-      specialty: "Classic gentleman cuts and beard maintenance",
-      rating: 4.9,
-      reviews: 84,
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-      featured: true,
-      award: "Regulars' Pick",
-    },
-    {
-      name: "Kerim",
-      role: "Detailing & Razor Finish",
-      experience: "7+ years",
-      specialty: "Lineups, razor passes, and finishing precision",
-      rating: 4.9,
-      reviews: 76,
-      image: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    },
-    {
-      name: "Adel",
-      role: "Modern Crop & Styling",
-      experience: "6+ years",
-      specialty: "Current trends shaped to suit everyday wear",
-      rating: 4.8,
-      reviews: 71,
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-    },
-  ];
+  const barbers = goodLookBarbers.map((barber, index) => ({
+    ...barber,
+    rating: shopInfo.rating,
+    reviews: [102, 87, 59][index] ?? 40,
+    award: barber.featured ? barber.accent : undefined,
+  }));
 
   return (
     <div className="pb-20 pt-20 md:pb-0">
@@ -68,7 +33,7 @@ export function Barbers() {
             <Badge className="border-0 bg-primary px-5 py-2 text-primary-foreground">The Team</Badge>
             <h1 className="display-font mt-6 text-6xl text-white md:text-7xl">Meet the Barbers</h1>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-white/70">
-              A tighter roster, clearer specialties, and a team page that reads like a barbershop instead of a generic salon.
+              The crew behind {shopInfo.name}, with a focus on clean cuts, precise beard work, and dependable service.
             </p>
           </motion.div>
         </div>
@@ -145,10 +110,10 @@ export function Barbers() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid gap-6 md:grid-cols-4">
             {[
-              { label: "Barbers", value: "4", icon: Scissors },
-              { label: "Years Combined", value: "31+", icon: Medal },
-              { label: "Review Signals", value: "80+", icon: Star },
-              { label: "Return Rate Feel", value: "High", icon: Trophy },
+              { label: "Barbers", value: `${goodLookBarbers.length}`, icon: Scissors },
+              { label: "Years Combined", value: "25+", icon: Medal },
+              { label: "Google Rating", value: `${shopInfo.rating}`, icon: Star },
+              { label: "Google Reviews", value: `${shopInfo.reviewCount}+`, icon: Trophy },
             ].map((stat) => {
               const Icon = stat.icon;
               return (

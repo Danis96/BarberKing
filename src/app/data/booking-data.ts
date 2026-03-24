@@ -1,3 +1,5 @@
+import { goodLookBarbers } from "./shop-info";
+
 export const services = [
   {
     id: "signature-haircut",
@@ -54,30 +56,12 @@ export const services = [
 ];
 
 export const barbers = [
-  {
-    id: "amin",
-    name: "Amin",
-    role: "Fade & Texture Specialist",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  },
-  {
-    id: "harun",
-    name: "Harun",
-    role: "Classic Cuts & Beard Care",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  },
-  {
-    id: "kerim",
-    name: "Kerim",
-    role: "Detailing & Razor Finish",
-    image: "https://images.unsplash.com/photo-1504257432389-52343af06ae3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  },
-  {
-    id: "adel",
-    name: "Adel",
-    role: "Modern Crop & Styling",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-  },
+  ...goodLookBarbers.map((barber) => ({
+    id: barber.id,
+    name: barber.name,
+    role: barber.role,
+    image: barber.image,
+  })),
   {
     id: "any",
     name: "Any Available Barber",
