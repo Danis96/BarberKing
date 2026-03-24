@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Crown, Sparkles, Gem, Package, ArrowRight, Check } from "lucide-react";
+import { Scissors, Sparkles, Gem, Package, ArrowRight, Check } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -9,44 +9,44 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 export function Services() {
   const serviceCategories = [
     {
-      icon: Crown,
-      category: "Signature Cuts",
+      icon: Scissors,
+      category: "Haircuts & Styling",
       image: "https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBoYWlyY3V0JTIwc2VydmljZXxlbnwxfHx8fDE3NzM3Mzc4Njh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       services: [
-        { name: "Signature Cut", price: "30 KM", duration: "40 min", description: "Premium precision cut tailored to perfection" },
-        { name: "Royal Fade", price: "40 KM", duration: "50 min", description: "Masterful fade with expert styling", popular: true },
-        { name: "Executive Trim", price: "25 KM", duration: "30 min", description: "Professional cut for the modern gentleman" },
-        { name: "Long Hair Design", price: "45 KM", duration: "65 min", description: "Specialized styling for longer hair" },
+        { name: "Women's Haircut", price: "35 KM", duration: "45 min", description: "Personalized cut and finish for your hair texture and style" },
+        { name: "Men's Haircut", price: "25 KM", duration: "30 min", description: "Clean, precise haircut with styling", popular: true },
+        { name: "Wash & Blow Dry", price: "20 KM", duration: "30 min", description: "Fresh wash and smooth salon finish" },
+        { name: "Event Styling", price: "45 KM", duration: "60 min", description: "Soft waves, polished volume, or occasion styling" },
       ],
     },
     {
       icon: Sparkles,
-      category: "Beard Kingdom",
+      category: "Color Services",
       image: "https://images.unsplash.com/photo-1603899968034-1a56ca48d172?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWFyZCUyMHRyaW0lMjBncm9vbWluZ3xlbnwxfHx8fDE3NzM3MDY5OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       services: [
-        { name: "Beard Styling", price: "20 KM", duration: "25 min", description: "Expert shaping and conditioning" },
-        { name: "King's Shave", price: "35 KM", duration: "45 min", description: "Luxurious hot towel straight razor experience", popular: true },
-        { name: "Beard Sculpting", price: "28 KM", duration: "35 min", description: "Precision design and detailing" },
+        { name: "Root Touch-Up", price: "45 KM", duration: "90 min", description: "Color refresh for a clean, even result" },
+        { name: "Hair Coloring", price: "60 KM", duration: "120 min", description: "Full color service with consultation", popular: true },
+        { name: "Balayage & Highlights", price: "90 KM", duration: "150 min", description: "Dimension, brightness, and custom placement" },
       ],
     },
     {
       icon: Gem,
-      category: "Royal Treatments",
+      category: "Care & Treatments",
       image: "https://images.unsplash.com/photo-1590540179446-a27de47f393e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW5zJTIwaGFpciUyMHN0eWxpbmd8ZW58MXx8fHwxNzczNzM3ODcxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       services: [
-        { name: "Premium Scalp Care", price: "25 KM", duration: "25 min", description: "Revitalizing treatment with massage" },
-        { name: "Royal Facial", price: "30 KM", duration: "30 min", description: "Deep cleansing and skin rejuvenation" },
-        { name: "Relaxation Ritual", price: "18 KM", duration: "18 min", description: "Therapeutic head and neck massage" },
+        { name: "Hair Treatment", price: "25 KM", duration: "25 min", description: "Revitalizing care for shine and softness" },
+        { name: "Scalp Care", price: "30 KM", duration: "30 min", description: "Deep cleansing and balance for scalp health" },
+        { name: "Relax Massage", price: "20 KM", duration: "20 min", description: "Short unwind session during your appointment" },
       ],
     },
     {
       icon: Package,
-      category: "King's Packages",
+      category: "Salon Packages",
       image: "https://images.unsplash.com/photo-1737061467396-39aac10feb47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3QlMjB0b3dlbCUyMHNoYXZlJTIwbHV4dXJ5fGVufDF8fHx8MTc3MzczNzg3MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       services: [
-        { name: "King's Package", price: "55 KM", duration: "75 min", description: "Cut + beard styling + premium finish", popular: true },
-        { name: "Emperor Experience", price: "85 KM", duration: "100 min", description: "Complete royal treatment with all services" },
-        { name: "Royal Refresh", price: "42 KM", duration: "50 min", description: "Quick cut + style + scalp care" },
+        { name: "Beauty Package", price: "75 KM", duration: "100 min", description: "Cut, treatment, and styling combined", popular: true },
+        { name: "Color & Finish", price: "110 KM", duration: "160 min", description: "Color service plus final styling" },
+        { name: "Quick Refresh", price: "42 KM", duration: "50 min", description: "Wash, trim, and polished finish" },
       ],
     },
   ];
@@ -69,17 +69,17 @@ export function Services() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-5 py-2 mb-6">
-              <Crown className="w-5 h-5 text-primary" />
-              <span className="text-sm text-primary">Premium Services</span>
+              <Scissors className="w-5 h-5 text-primary" />
+              <span className="text-sm text-primary">Image Services</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6">
-              Royal Grooming
+              Hair & Beauty
               <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Experience world-class grooming with our expert barbers. Every service includes a complimentary consultation.
+              Explore the core Image salon menu, from cuts and color to treatments and beauty-focused finishing.
             </p>
           </motion.div>
         </div>
@@ -198,20 +198,20 @@ export function Services() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <Crown className="w-16 h-16 text-primary mx-auto mb-6" />
+            <Sparkles className="w-16 h-16 text-primary mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl mb-4">Unsure What to Choose?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Our master barbers will consult with you to create the perfect look for your unique style.
+              The Image team can guide you toward the right service based on your hair goals, maintenance level, and timing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/30">
                 <Link to="/booking">
-                  Book Free Consultation
+                  Book Consultation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 hover:border-primary">
-                <Link to="/barbers">Meet Our Barbers</Link>
+                <Link to="/barbers">Meet Our Team</Link>
               </Button>
             </div>
           </motion.div>

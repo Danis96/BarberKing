@@ -1,7 +1,7 @@
 
-# King Barber Lounge
+# Image Frizersko - Kozmeticki salon
 
-King Barber Lounge is a single-page React/Vite marketing and booking experience for a premium barbershop. The app includes a branded landing page, service and barber showcases, a gallery, and a multi-step appointment booking flow.
+Image Frizersko - Kozmeticki salon is a single-page React/Vite marketing and booking experience for a Sarajevo hair and beauty salon. The app includes a branded landing page, service and team showcases, a gallery, and a multi-step appointment booking flow.
 
 ## Overview
 
@@ -11,7 +11,7 @@ Current pages:
 
 - `/` home page with hero, feature highlights, and service previews
 - `/services` service listing and pricing presentation
-- `/barbers` barber/team showcase
+- `/barbers` team showcase
 - `/gallery` gallery and brand imagery experience
 - `/booking` multi-step booking flow with mock appointment data
 
@@ -82,7 +82,7 @@ Important directories:
 
 - `src/app/pages` contains route-level page components
 - `src/app/components` contains shared layout and UI building blocks
-- `src/app/data` contains mock booking services, barber profiles, and timeslot data
+- `src/app/data` contains mock booking services, specialist profiles, and timeslot data
 - `src/styles` contains global styling, theme tokens, fonts, and Tailwind imports
 
 ## Application Notes
@@ -91,7 +91,7 @@ Important directories:
 
 The booking page is currently mock-driven:
 
-- services, barbers, and timeslots are loaded from `src/app/data/booking-data.ts`
+- services, specialists, and timeslots are loaded from `src/app/data/booking-data.ts`
 - “Quick Book” chooses a predefined next available slot from local mock logic
 - booking confirmation currently shows a toast and logs the payload to the console
 - there is no backend, persistence layer, or payment integration yet
@@ -121,7 +121,7 @@ Common places to update branding and content:
 - navigation, logo text, and CTA links: `src/app/components/Header.tsx`
 - shared page chrome: `src/app/components/Layout.tsx`
 - homepage messaging and hero content: `src/app/pages/Home.tsx`
-- booking services, barber profiles, and schedule data: `src/app/data/booking-data.ts`
+- booking services, specialist profiles, and schedule data: `src/app/data/booking-data.ts`
 
 ## Known Limitations
 
@@ -134,5 +134,5 @@ Common places to update branding and content:
 
 The original design source referenced by this codebase is:
 
-[Premium Barber Shop Web App on Figma](https://www.figma.com/design/quoHVyizFFBlF0w3LxImHu/Premium-Barber-Shop-Web-App)
+[Original Figma source](https://www.figma.com/design/quoHVyizFFBlF0w3LxImHu/Premium-Barber-Shop-Web-App)
   

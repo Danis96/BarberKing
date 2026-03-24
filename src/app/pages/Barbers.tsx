@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { motion } from "motion/react";
-import { Star, Crown, Award, Calendar, Medal, Trophy } from "lucide-react";
+import { Star, Sparkles, Award, Calendar, Medal, Trophy } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
@@ -9,44 +9,44 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 export function Barbers() {
   const barbers = [
     {
-      name: "Dejan Mirković",
-      role: "Master Barber & Owner",
-      experience: "15+ years",
-      specialty: "Royal fades & precision cuts",
-      rating: 5.0,
-      reviews: 312,
-      image: "https://images.unsplash.com/photo-1747830280502-f33d7305a714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBiYXJiZXIlMjBwb3J0cmFpdCUyMG1hbGV8ZW58MXx8fHwxNzczNzM2MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      featured: true,
-      award: "Best Barber 2025",
-    },
-    {
-      name: "Stefan Janković",
-      role: "Senior Stylist",
+      name: "Aldijana",
+      role: "Color Specialist",
       experience: "10+ years",
-      specialty: "Modern styling & beard artistry",
-      rating: 4.9,
-      reviews: 267,
-      image: "https://images.unsplash.com/photo-1659355751209-2e6c7c8091fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZW5zJTIwaGFpcnN0eWxpc3QlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzczNzM3OTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      specialty: "Blonde work, color refresh, and shine-focused results",
+      rating: 5.0,
+      reviews: 87,
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
       featured: true,
-      award: "Style Innovator",
+      award: "Client Favorite",
     },
     {
-      name: "Marko Kovačević",
-      role: "Expert Barber",
-      experience: "8+ years",
-      specialty: "Classic cuts & hot shaves",
+      name: "Azem",
+      role: "Men's Hair Specialist",
+      experience: "15+ years",
+      specialty: "Classic men's cuts, detail work, and consistent finishes",
       rating: 4.9,
-      reviews: 198,
-      image: "https://images.unsplash.com/photo-1759134198561-e2041049419c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzdHlsaXN0JTIwd29ya2luZ3xlbnwxfHx8fDE3NzM3Mzc5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      reviews: 87,
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      featured: true,
+      award: "Long-Time Client Favorite",
     },
     {
-      name: "Nikola Petrović",
-      role: "Style Specialist",
+      name: "Sarah",
+      role: "Nails & Beauty Specialist",
       experience: "7+ years",
-      specialty: "Contemporary styles & coloring",
+      specialty: "Clean beauty finishing and appointment add-ons",
+      rating: 4.9,
+      reviews: 87,
+      image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+    },
+    {
+      name: "Berina",
+      role: "Hair & Lash Artist",
+      experience: "6+ years",
+      specialty: "Soft styling, lashes, and polished finishing details",
       rating: 4.8,
-      reviews: 176,
-      image: "https://images.unsplash.com/photo-1759142016096-a9d1a5ebcc09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXJiZXIlMjBzaG9wJTIwcHJvZmVzc2lvbmFsJTIwdGVhbXxlbnwxfHx8fDE3NzM3Mzc5NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      reviews: 87,
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
     },
   ];
 
@@ -71,16 +71,16 @@ export function Barbers() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-5 py-2 mb-6">
               <Medal className="w-5 h-5 text-primary" />
-              <span className="text-sm text-primary">Elite Team</span>
+              <span className="text-sm text-primary">Image Team</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6">
               Meet the
               <span className="block bg-gradient-to-r from-primary via-yellow-300 to-primary bg-clip-text text-transparent">
-                Masters
+                Specialists
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our award-winning barbers are craftsmen dedicated to making you look and feel like royalty.
+              A multi-service salon team trusted for haircuts, color, styling, and beauty care in central Sarajevo.
             </p>
           </motion.div>
         </div>
@@ -134,7 +134,7 @@ export function Barbers() {
                     <div className="absolute bottom-0 left-0 right-0 p-8">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-primary to-yellow-500 flex items-center justify-center">
-                          <Crown className="w-6 h-6 text-primary-foreground" />
+                          <Sparkles className="w-6 h-6 text-primary-foreground" />
                         </div>
                         <div>
                           <h3 className="text-2xl">{barber.name}</h3>
@@ -184,16 +184,16 @@ export function Barbers() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl mb-3">Why Choose Our Team</h2>
-            <p className="text-muted-foreground text-lg">Excellence backed by numbers</p>
+            <h2 className="text-4xl md:text-5xl mb-3">Why Clients Return</h2>
+            <p className="text-muted-foreground text-lg">Experience, loyalty, and trusted service</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: "Master Barbers", value: "4", icon: Crown },
-              { label: "Years Combined", value: "40+", icon: Medal },
-              { label: "Happy Clients", value: "8K+", icon: Star },
-              { label: "Average Rating", value: "4.9", icon: Award },
+              { label: "Specialists", value: "4", icon: Sparkles },
+              { label: "Years Combined", value: "35+", icon: Medal },
+              { label: "Reviews", value: "87", icon: Star },
+              { label: "Average Rating", value: "5.0", icon: Award },
             ].map((stat, index) => {
               const Icon = stat.icon;
               return (
@@ -229,13 +229,13 @@ export function Barbers() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl md:text-5xl mb-4">Ready for Royal Treatment?</h2>
+            <h2 className="text-4xl md:text-5xl mb-4">Ready to Book at Image?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Book your appointment with one of our master barbers today.
+              Choose your preferred specialist or take the next available appointment.
             </p>
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/30">
               <Link to="/booking">
-                <Crown className="w-5 h-5 mr-2" />
+                <Sparkles className="w-5 h-5 mr-2" />
                 Book Your Appointment
               </Link>
             </Button>

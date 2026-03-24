@@ -39,17 +39,17 @@ const totalSteps = 4;
 
 const bookingSteps = [
   { id: 1, label: "Service", description: "Choose treatment", icon: Scissors },
-  { id: 2, label: "Barber", description: "Pick your barber", icon: User },
+  { id: 2, label: "Team", description: "Pick your specialist", icon: User },
   { id: 3, label: "Schedule", description: "Select date and time", icon: CalendarDays },
   { id: 4, label: "Details", description: "Confirm your booking", icon: Check },
 ] as const;
 
 const barberNotes: Record<string, { specialty: string; accent: string }> = {
-  dejan: { specialty: "Precision fades and executive looks", accent: "Owner's pick" },
-  stefan: { specialty: "Classic cuts with modern texture", accent: "Most requested" },
-  marko: { specialty: "Sharp beard work and contouring", accent: "Detail specialist" },
-  nikola: { specialty: "Style-forward cuts and finish", accent: "Trend focused" },
-  any: { specialty: "Fastest route to the next open chair", accent: "Best availability" },
+  aldijana: { specialty: "Color correction, balayage, and glossy finishes", accent: "Color expert" },
+  azem: { specialty: "Precise men's cuts with long-term client loyalty", accent: "Most requested" },
+  sarah: { specialty: "Beauty care and clean finishing details", accent: "Beauty focused" },
+  berina: { specialty: "Hair styling and lashes for polished results", accent: "Finishing specialist" },
+  any: { specialty: "Fastest route to the next open appointment", accent: "Best availability" },
 };
 
 const slotPeriods = [
@@ -106,8 +106,8 @@ function getStepCopy(step: number) {
       };
     case 2:
       return {
-        title: "Select your barber",
-        description: "Go with a preferred specialist or pick the fastest available chair.",
+        title: "Select your specialist",
+        description: "Choose a preferred team member or pick the fastest available appointment.",
       };
     case 3:
       return {
@@ -117,7 +117,7 @@ function getStepCopy(step: number) {
     case 4:
       return {
         title: "Add your details",
-        description: "Review the appointment and leave the contact details we should use.",
+        description: "Review the appointment and leave the contact details the salon should use.",
       };
     default:
       return {
@@ -222,7 +222,7 @@ export function Booking() {
 
   return (
     <div className="pt-20 pb-20 md:pb-8">
-      <section className="relative overflow-hidden border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.14),_transparent_28%),linear-gradient(180deg,rgba(21,37,64,0.98),rgba(10,22,40,1))] py-10">
+      <section className="relative overflow-hidden border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(229,185,140,0.22),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(217,230,223,0.42),_transparent_34%),linear-gradient(180deg,#f7f1ea_0%,#efe6da_100%)] py-10 dark:bg-[radial-gradient(circle_at_top_left,_rgba(239,199,159,0.14),_transparent_28%),linear-gradient(180deg,rgba(21,37,64,0.98),rgba(10,22,40,1))]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-6 lg:grid-cols-[1.6fr_0.9fr]">
@@ -267,10 +267,10 @@ export function Booking() {
                         onClick={() => isAccessible && setStep(item.id)}
                         className={`group relative rounded-2xl border p-4 text-left transition-all ${
                           isActive
-                            ? "border-primary bg-primary/12 shadow-[0_0_0_1px_rgba(251,191,36,0.2)]"
+                            ? "border-primary bg-primary/12 shadow-[0_0_0_1px_rgba(229,185,140,0.22)]"
                             : isComplete
-                              ? "border-primary/20 bg-card/80 hover:border-primary/35"
-                              : "border-border/70 bg-card/55 hover:border-primary/20"
+                              ? "border-primary/20 bg-card/88 hover:border-primary/35"
+                              : "border-border/70 bg-card/74 hover:border-primary/20"
                         } ${!isAccessible ? "cursor-not-allowed opacity-60" : ""}`}
                       >
                         {index < bookingSteps.length - 1 && (
@@ -305,7 +305,7 @@ export function Booking() {
                     <div className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Quick book</div>
                     <h2 className="mt-2 text-2xl">Need the fastest route?</h2>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      We’ll preselect a popular service, the earliest chair, and the next bookable slot.
+                      We’ll preselect a popular service, the earliest available specialist, and the next bookable slot.
                     </p>
                   </div>
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -319,7 +319,7 @@ export function Booking() {
                     <span className="text-foreground">Popular pick</span>
                   </div>
                   <div className="flex items-center justify-between rounded-xl border border-border/70 bg-background/50 px-4 py-3">
-                    <span>Barber</span>
+                    <span>Specialist</span>
                     <span className="text-foreground">Any available</span>
                   </div>
                   <div className="flex items-center justify-between rounded-xl border border-border/70 bg-background/50 px-4 py-3">
@@ -480,7 +480,7 @@ export function Booking() {
 
                                   <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto] md:items-center">
                                     <p className="text-sm leading-6 text-muted-foreground">
-                                      {barberMeta?.specialty ?? "Professional grooming tailored to your visit."}
+                                      {barberMeta?.specialty ?? "Professional salon care tailored to your visit."}
                                     </p>
                                     <div className="flex items-center gap-2 self-start md:self-auto">
                                       <div className="rounded-full border border-border/70 bg-background/60 px-3 py-1 text-sm">
@@ -770,8 +770,8 @@ export function Booking() {
                     </div>
 
                     <div className="rounded-2xl border border-border/70 bg-background/45 p-4">
-                      <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Barber</div>
-                      <div className="mt-2 text-lg">{selectedBarber?.name ?? "Choose a barber"}</div>
+                      <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Specialist</div>
+                      <div className="mt-2 text-lg">{selectedBarber?.name ?? "Choose a specialist"}</div>
                       <div className="mt-2 text-sm text-muted-foreground">
                         {selectedBarber?.role ?? "Selection appears here"}
                       </div>
