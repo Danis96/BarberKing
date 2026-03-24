@@ -13,12 +13,12 @@ export function Footer() {
                 <Sparkles className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <div className="text-lg text-foreground">Image</div>
-                <div className="text-xs text-primary -mt-1">SALON</div>
+                <div className="display-font text-2xl leading-none text-foreground">The Men's Room</div>
+                <div className="text-xs text-primary -mt-1 tracking-[0.28em] uppercase">Barbershop</div>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Frizersko - kozmeticki salon u Sarajevu sa fokusom na kosu, boju, njegu i uredan, moderan ambijent.
+              A Sarajevo barbershop focused on precise cuts, beard grooming, and a warm, club-like atmosphere.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/booking" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Book Appointment
+                  Book a Chair
                 </Link>
               </li>
             </ul>
@@ -55,11 +55,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">Zelenih beretki 16, 71000 Sarajevo</span>
+                <span className="text-sm text-muted-foreground">Hamdije Čemerlića 5 / Fojnička 1, Sarajevo</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">033 440 900</span>
+                <span className="text-sm text-muted-foreground">+387 62 253 084</span>
               </li>
             </ul>
           </div>
@@ -68,12 +68,12 @@ export function Footer() {
           <div>
             <h4 className="text-foreground mb-4">Working Hours</h4>
             <div className="text-sm text-muted-foreground mb-4 space-y-1">
-              <p>Mon - Sat: 08:00 - 20:00</p>
+              <p>Mon - Sat: 09:00 - 20:00</p>
               <p>Sunday: Closed</p>
             </div>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://www.facebook.com/frizerskokozmetickisaloniIMAGE/?locale=hr_HR"
+                href="https://www.facebook.com/profile.php?id=100066733181291"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-muted hover:bg-gradient-to-br hover:from-primary hover:to-yellow-500 transition-all flex items-center justify-center group"
@@ -81,7 +81,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5 group-hover:text-primary-foreground" />
               </a>
               <a
-                href="https://www.facebook.com/frizerskokozmetickisaloniIMAGE/?locale=hr_HR"
+                href="https://www.facebook.com/profile.php?id=100066733181291"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 bg-muted hover:bg-gradient-to-br hover:from-primary hover:to-yellow-500 transition-all flex items-center justify-center group"
@@ -94,7 +94,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2026 Image Frizersko - Kozmeticki salon. All rights reserved.
+            © 2026 Barbershop The Men's Room. All rights reserved.
           </p>
         </div>
       </div>
